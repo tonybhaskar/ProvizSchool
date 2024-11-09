@@ -1,0 +1,101 @@
+/* Default navbar styles for larger screens */
+nav {
+    position: relative;
+    /* Needed for positioning the hamburger */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    font-family: "Playfair Display";
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav h2 {
+    color: #60b386;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+nav h2:hover {
+    color: black;
+}
+
+nav ul li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.5s ease;
+}
+
+nav ul li button:hover {
+    background-color: #60b386;
+    border-radius: 5px;
+}
+
+/* Hamburger button styles */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    color: #60b386;
+}
+
+/* Tablet and mobile view */
+@media (max-width: 770px) {
+
+    /* Show hamburger icon on small screens */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide the nav links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+        padding: 0;
+        position: absolute;
+        top: 80px;
+        /* Position it below the navbar */
+        right: 20px;
+        /* Align with the hamburger icon */
+        background: white;
+        width: calc(100% - 40px);
+        /* Full width minus padding */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        z-index: 1;
+    }
+
+    /* Show nav links when menu is open */
+    .nav-links.open {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Adjust spacing and font sizes for smaller screens */
+    nav ul li button {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+}

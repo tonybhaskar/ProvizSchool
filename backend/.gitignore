@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Environment variables
+*.env
+
+# Log files
+*.log
+
+# Process ID files
+*.pid
+
+# Django migration files and database (if using SQLite)
+db/
+migrations/
+*.sqlite3
+
+# Python bytecode files
+__pycache__/
+*.pyc
+
+# Coverage reports (for test coverage)
+coverage/
+
+# Temporary files (Backup, Sublime, etc.)
+*.bak
+*.sublime-workspace
+*.sublime-project
